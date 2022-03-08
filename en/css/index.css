@@ -1,0 +1,132 @@
+*{
+    /* 頁面初始化，清除元素的内外邊距*/
+    padding: 0;
+    margin: 0;
+}
+body{
+    /* 寬度占整個瀏覽器可視區域的高度 */
+    width: 100vm;
+    background-color: #f2f2f2;
+}
+li{
+    /* 清除 li 元素前的項目符號 */
+    list-style: none;
+}
+a{
+    /* 清除 a 元素的下劃綫 */
+    text-decoration: none;
+    color: #000;
+}
+.navbar {
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    /* 盒子陰影 */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.navbar .nav {
+    width: 1200px;
+    height:100%;
+    /* 使元素自動居中 */
+    margin: 0 auto;
+}
+.navbar .nav ul{
+    /* 相對定位 */
+    position: relative;
+    /* 彈性佈局 */
+    display: flex;
+    /* 使子元素平均分配寬度 */
+    justify-content: space-around;
+    width: 100%;
+    height:100%
+}
+.navbar  .nav ul > li {
+    width: 100%;
+    height: 100%;
+}
+.navbar .nav ul > li > a {
+    /* 因爲 a 元素是行内元素 因此必須將其變爲行内塊或塊級才能設定其寬度和高度 */
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 70px;
+    text-align: center;
+}
+.navbar .nav ul > li ol {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    /* 讓盒子沿 y 軸縮放至0，即隱藏盒子 */
+    transform: scaleY(0);
+    /* 設定下放起點為頂端中心 */
+    transform-origin: 50% 0;
+    /* 設定盒子下放過渡時長 */
+    transition: all 0.5s;
+}
+.navbar .nav ul > li ol li {
+    height: 70px;
+    border-bottom: 1px solid rgb(245, 245, 245);
+}
+.navbar .nav ul >li ol li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 70px;
+    text-align: center;
+}
+.navbar .nav ul > li ol li:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+.navbar .nav ul > li:hover ol {
+    transform: scaleY(1);
+}
+/* 開始設定綫條 */
+.navbar .nav ul .underline {
+    /* 絕對定位 */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 240px;
+    height: 6px;
+    /* 盒子左上角及右上角的圓角處理 0px即為無處理*/
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background-color: #0072bc;
+    /* 橫向過渡動畫 */
+    transition: all 0.4s;
+    /*如果只有上面的設定 綫條會影響游標移入li這個效果 但下面這一行代碼可以解決這個問題 就貌似這個元素你能看見 但是你一點它 就看不到了 */
+    pointer-events: none;
+}
+.navbar .nav ul .underline::before {
+    content: "";
+    /* 利用::before僞元素設定三角形 */
+    position: absolute;
+    top: -10px;
+    /* calc方法自動計算數值 使盒子居中 */
+    left:calc(50% - 9px);
+    width: 18px;
+    height: 10px;
+    /* inherit可以繼承父元素屬性值 */
+    background-color: inherit;
+    /* polygon只需提供最少三個點就可以將這三個點連接到一起 並繪製圖案  兩個點的位置(x,y) 0 100% 這個點就表明在x軸上為0px，在y軸是100% 即盒子的高度  x軸方向向右 y軸方向向下 設定好三個點 將這三個點連接起來就是三角形 */
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+.navbar .nav ul > li:nth-child(2):hover ~ .underline {
+    left: 240px;
+    background-color: #0072bc;
+}
+/* 重複上述操作 */
+.navbar .nav ul> li:nth-child(3):hover ~ .underline {
+    left: 480px;
+    background-color: #0072bc;
+}
+/* 重複上述操作 */
+.navbar .nav ul> li:nth-child(4):hover ~ .underline {
+    left: 720px;
+    background-color: #0072bc;
+}
+/* 重複上述操作 */
+.navbar .nav ul> li:nth-child(5):hover ~ .underline {
+    left: 960px;
+    background-color: #0072bc;
+}
