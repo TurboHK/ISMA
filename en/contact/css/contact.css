@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    /* 網頁整體背景色 IAEA蓝：#0072bc */
+    background: #fff;
+    transition: 0.5s;
+}
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo
+{
+    position: relative;
+    max-width: 100px;
+}
+header ul
+{
+    position: relative;
+    display: flex;
+}
+header ul li
+{
+    list-style: none;
+}
+header ul li a
+{
+    display: inline-block;
+    /* 右上導航字體顔色 */
+    color: #0072bc;
+    font-weight: 600;
+    margin-left: 40px;
+    text-decoration: none;
+}
+.content
+{
+    position: relative;
+    width: 100%;
+    display: flex ;
+    padding-left: 0px;
+    margin-top: 0px;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-start;
+}
+.content .textBox
+{
+    position: relative;
+    max-width: 900px;
+}
+.content .textBox h1
+{
+    height: 90px;
+}
+.content .textBox a
+{
+    font-size: 2.5em;
+    font-weight: 600;
+    line-height: 1em;
+    color: #0072bc;
+}
+.content .textBox h2
+{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    /* 方框背景色 */
+    background: #0072bc;
+    /* 大標題顔色 */
+    color: rgb(219, 219, 219);
+    border-radius: 5px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+.content .textBox p
+{
+    /* 小字介紹字體顔色 */ 
+    color: #111;
+}
+.content .textBox h3
+{
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 1em;
+    color: #111;
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    height: 35;
+}
+
+.content .textBox h3 ul li
+{
+    list-style: none;
+}
+
+.content .textBox h3 ul li a
+{
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: 600;
+    text-decoration: none;
+    color: #0072bc;
+    height: 35;
+}
+
+.content .textBox h4
+{
+    font-size: 1.3em;
+    font-weight: 500;
+    line-height: 1em;
+    color: rgb(44, 44, 44);
+}
