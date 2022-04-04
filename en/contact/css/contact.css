@@ -29,6 +29,7 @@ header
     justify-content: space-between;
     align-items: center;
 }
+
 header .logo
 {
     position: relative;
@@ -56,7 +57,7 @@ header ul li a
 {
     position: relative;
     width: 100%;
-    display: flex ;
+    display: flex;
     padding-left: 0px;
     margin-top: 0px;
     justify-content: space-between;
@@ -130,10 +131,82 @@ header ul li a
     height: 35;
 }
 
-.content .textBox h4
+.content h4 ul li
 {
-    font-size: 1.3em;
+    list-style: none;
+    position: absolute;
+    bottom: 50%;
+    top: 750px;
+    justify-content: center;
+}
+
+.content h4 ul li a
+{
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 12px 30px;
+    /* 按鈕顔色 */
+    background: #0072bc;
+    /* 按鈕上的字 */
+    color: #fff;
+    border-radius: 40px;
     font-weight: 500;
-    line-height: 1em;
-    color: rgb(44, 44, 44);
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.content h4 ul li a:hover 
+{
+    background: #0099ff;
+    color: rgb(255, 255, 255);
+    cursor:wait
+}
+
+footer
+{
+    position: absolute;
+    margin-bottom: -150px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px; /*設定footer本身高度*/
+    background-color: #707070a2;
+    list-style: none;
+}
+
+.footer p{
+    font-weight: bold;
+    font-weight: 400;
+    font-size: 1.3em;
+    font-family: 'Kanit', sans-serif;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+}
+
+.footer p:hover{
+    color: #0072bc;
+}
+
+.footer a{
+    font-weight: 400;
+    font-size: 1em;
+    font-family: 'Saira', sans-serif;
+    right: 0;
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    color: #0099ff;
+    cursor: help;
 }
