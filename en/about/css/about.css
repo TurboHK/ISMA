@@ -115,3 +115,51 @@ header ul li a
     line-height: 1em;
     color: rgb(44, 44, 44);
 }
+
+footer
+{
+    position: absolute;
+    margin-bottom: -150px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px; /*設定footer本身高度*/
+    background-color: #707070a2;
+    list-style: none;
+}
+
+.footer p{
+    font-weight: bold;
+    font-weight: 400;
+    font-size: 1.3em;
+    font-family: 'Kanit', sans-serif;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+}
+
+.footer p:hover{
+    color: #0072bc;
+}
+
+.footer a{
+    font-weight: 400;
+    font-size: 1em;
+    font-family: 'Saira', sans-serif;
+    right: 0;
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    color: #0099ff;
+    cursor: help;
+}
