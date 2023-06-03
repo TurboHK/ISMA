@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "isma.at.eu.org",
+  "Id": "0f4d6a0b-7b70-49cd-b0ca-2309580e107c"
+}
